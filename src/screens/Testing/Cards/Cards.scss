@@ -1,0 +1,45 @@
+@import "../../../variables";
+
+.testing-cards {
+  display: flex;
+  flex-direction: column;
+  padding: $pc-padding 0;
+  width: $pc-width;
+  margin: 0 auto;
+  min-height: calc(100vh - $header-height - $header-padding * 2 - $footer-height - $footer-padding * 2 - 48px * 2);
+
+  h2 {
+    color: #2F01B3;
+  }
+
+  .card {
+    padding: 20px;
+    margin: 40px 0;
+    width: 300px;
+    color: white;
+    background: linear-gradient(254.34deg, #AB05D4 1.09%, #6A16BD 100%);
+    box-shadow: 0 10px 11px -7px rgba(0, 0, 0, 0.25);
+
+    &__word {
+      padding-bottom: 20px;
+      border-bottom: 2px solid white;
+      font-size: 24px;
+      font-weight: 600;
+    }
+
+    &__translation {
+      padding-top: 20px;
+      font-size: 20px;
+      font-weight: 600;
+    }
+  }
+
+  button {
+    border: 2px solid #2F01B3;
+    color: #2F01B3;
+    padding: 12px 62px;
+    width: fit-content;
+    background: none;
+    cursor: pointer;
+  }
+}

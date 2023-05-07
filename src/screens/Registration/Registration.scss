@@ -1,0 +1,88 @@
+.registration-section {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  .form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    gap: 24px;
+
+    &__input {
+      border-right: solid 3px white;
+      border-left: solid 3px white;
+      border-bottom: solid 3px white;
+      position: relative;
+
+      input {
+        height: 20px;
+        width: 650px;
+        background-color: unset;
+        border: none;
+        padding: 10px 20px 5px;
+        color: white;
+        font-size: 18px;
+
+        &:focus {
+          outline: none;
+        }
+
+        &:-webkit-autofill,
+        &:-webkit-autofill:focus {
+          transition: background-color 600000s 0s, color 600000s 0s;
+        }
+      }
+
+      .border-top {
+        border-top: solid 3px white;;
+        position: absolute;
+        right: 0;
+        left: 25%;
+      }
+    }
+
+    &__tip {
+      font-size: 12px;
+      font-weight: 600;
+      color: rgb(209, 255, 240);
+    }
+
+    &__item {
+      position: relative;
+
+      label {
+        position: absolute;
+        top: -10px;
+        left: 20px;
+        font-size: 20px;
+        line-height: 24px;
+        font-weight: 600;
+      }
+    }
+  }
+
+  .error-panel {
+    margin-top: 5px;
+    background-color: rgba(255, 0, 0, 0.46);
+    color: white;
+    font-size: 14px;
+    padding: 2px 20px;
+  }
+
+  h1 {
+    color: white;
+    margin-bottom: 32px;
+  }
+
+  .button {
+    height: 55px;
+    width: 380px;
+    margin-top: 32px;
+    color: #2F01B3;
+  }
+}

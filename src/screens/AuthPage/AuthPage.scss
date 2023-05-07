@@ -1,0 +1,32 @@
+.main-auth-page {
+  width: 1000px;
+  margin: 0 auto;
+  align-items: center;
+  display: flex;
+  gap: 50px;
+
+  .body {
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+  }
+
+  .image-container {
+    width: 500px;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  h1 {
+    color: white;
+  }
+
+  p {
+    color: white;
+  }
+}

@@ -1,0 +1,30 @@
+@import "../../../variables";
+
+.find-word-section {
+  display: flex;
+  flex-direction: column;
+  width: $pc-width;
+  padding: $pc-padding;
+  margin: 0 auto;
+  min-height: calc(100vh - $header-height - $header-padding * 2 - $footer-height - $footer-padding * 2 - $pc-padding * 2);
+
+  h3 {
+    margin-bottom: 20px;
+  }
+
+  .variants {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin: 20px 0;
+  }
+
+  button {
+    border: 2px solid #2F01B3;
+    color: #2F01B3;
+    padding: 12px 62px;
+    width: fit-content;
+    background: none;
+    cursor: pointer;
+  }
+}

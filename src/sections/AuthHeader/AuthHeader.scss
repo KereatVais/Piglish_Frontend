@@ -1,0 +1,86 @@
+@import "../../variables";
+
+.auth-page::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='100%25' width='100%25'%3E%3Cdefs%3E%3Cpattern id='doodad' width='73' height='73' viewBox='0 0 40 40' patternUnits='userSpaceOnUse' patternTransform=''%3E%3Crect width='100%25' height='100%25' fill='rgba(42, 67, 101,0)'/%3E%3Cpath d='M 0 20a 15.5 15.5 0 0 0 31 0h-11a 4.5 4.5 0 0 1-9 0z' fill='rgba(190, 227, 248,1)'/%3E%3Cpath d='M-20 20a 15.5 15.5 0 0 1 31 0h-11a 4.5 4.5 0 0 0-9 0zM 20 20a 15.5 15.5 0 0 1 31 0h-11a 4.5 4.5 0 0 0-9 0z ' fill='rgba(233, 216, 253,1)'/%3E%3C/pattern%3E%3C/defs%3E%3Crect fill='url(%23doodad)' height='200%25' width='200%25'/%3E%3C/svg%3E ");
+  height: 100vh;
+  opacity: 7%;
+}
+
+.auth-page {
+  background: linear-gradient(244.28deg, #2F01B3 1.29%, #4205BD 1.3%, #9112CD 53.88%, #D300D8 101.26%);
+  height: 100vh;
+  position: relative;
+
+  .polygon {
+    position: absolute;
+    width: 40%;
+    height: 30%;
+    background-color: white;
+    z-index: 0;
+  }
+
+  .polygon-top {
+    top: 0;
+    left: 0;
+    clip-path: polygon(0 0, 0 100%, 100% 0);
+  }
+
+  .polygon-bottom {
+    bottom: 0;
+    right: 0;
+    clip-path: polygon(100% 0, 0 100%, 100% 100%);
+  }
+
+  .logo-container {
+    cursor: pointer;
+
+    img {
+      width: 200px;
+    }
+  }
+
+  .auth-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    z-index: 1;
+    padding: 10px 20px;
+  }
+
+  .buttons {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 20px;
+
+    a {
+      text-decoration: none;
+      text-align: center;
+
+    }
+
+    &__login {
+      width: 205px;
+      height: 55px;
+      background-color: white;
+      color: #2F01B3;
+      line-height: 55px;
+    }
+
+    &__registration {
+      width: 205px;
+      height: 55px;
+      line-height: 50px;
+      color: white;
+      border: solid 4px white;
+      box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+    }
+  }
+}

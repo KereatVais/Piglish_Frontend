@@ -1,0 +1,128 @@
+@import "../../variables";
+
+.header {
+  padding: $header-padding 10px;
+  height: $header-height;
+  width: 100%;
+  background: linear-gradient(244.28deg, #2F01B3 1.29%, #4205BD 1.3%, #9112CD 53.88%, #D300D8 101.26%);
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  position: relative;
+  z-index: 1;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='100%25' width='100%25'%3E%3Cdefs%3E%3Cpattern id='doodad' width='73' height='73' viewBox='0 0 40 40' patternUnits='userSpaceOnUse' patternTransform=''%3E%3Crect width='100%25' height='100%25' fill='rgba(42, 67, 101,0)'/%3E%3Cpath d='M 0 20a 15.5 15.5 0 0 0 31 0h-11a 4.5 4.5 0 0 1-9 0z' fill='rgba(190, 227, 248,1)'/%3E%3Cpath d='M-20 20a 15.5 15.5 0 0 1 31 0h-11a 4.5 4.5 0 0 0-9 0zM 20 20a 15.5 15.5 0 0 1 31 0h-11a 4.5 4.5 0 0 0-9 0z ' fill='rgba(233, 216, 253,1)'/%3E%3C/pattern%3E%3C/defs%3E%3Crect fill='url(%23doodad)' height='200%25' width='200%25'/%3E%3C/svg%3E ");
+    height: inherit;
+    padding: $header-padding;
+    opacity: 7%;
+  }
+
+  .logo-container {
+    width: 140px;
+    //height: fit-content;
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .menu {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    position: relative;
+    z-index: 2;
+
+    &__item {
+      color: white;
+      padding: 0 10px;
+      font-size: 20px;
+      line-height: 24px;
+      text-decoration: none;
+    }
+
+    .active {
+      border-left: 3px solid white;
+
+    }
+  }
+
+  .user {
+    position: relative;
+    width: 100%;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+  }
+
+  .user-profile {
+    cursor: pointer;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    //gap: 20px;
+    position: absolute;
+    right: 50px;
+
+    &__avatar {
+      background-color: gray;
+      width: 40px;
+      height: 40px;
+      border-radius: 20%;
+      overflow: hidden;
+      margin-left: 20px;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    &__username {
+      color: white;
+      margin-right: 10px;
+      font-weight: 700;
+      font-size: 20px;
+    }
+
+    &__arrow-down {
+      width: 15px;
+      //height: 11px;
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+
+  .user-panel {
+    position: absolute;
+    cursor: pointer;
+    width: 180px;
+    top: 30px;
+    right: 30px;
+    background-color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border-radius: 12px;
+    box-shadow: 0px 0px 6px 2px rgba(0, 0, 0, 0.5);
+
+    &__logout {
+      padding-top: 20px;
+      border-top: 2px solid rgba(0, 0, 0, 0.2);
+    }
+  }
+}

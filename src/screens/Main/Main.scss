@@ -1,0 +1,13 @@
+@import "../../variables";
+
+.main-page {
+  width: $pc-width;
+  margin: 0 auto;
+  padding: $pc-padding 0;
+  min-height: calc(100vh - $header-height - $header-padding * 2 - $footer-height - $footer-padding * 2 - $pc-padding * 2);
+
+  div {
+    font-style: italic;
+    color: rgba(0, 0, 0, 0.3);
+  }
+}

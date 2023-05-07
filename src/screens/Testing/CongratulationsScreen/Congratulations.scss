@@ -1,0 +1,30 @@
+@import "../../../variables";
+
+.congratulations {
+  width: $pc-width;
+  padding: $pc-padding 0;
+  margin: 0 auto;
+
+  button {
+    background: linear-gradient(266.61deg, #A520D4 11.54%, #7A0FC9 101.13%);
+    margin-top: 40px;
+    color: white;
+    width: 210px;
+    padding: 12px 0;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 28px;
+    font-family: 'Sofia Sans', sans-serif;
+    border: none;
+    cursor: pointer;
+  }
+
+  .result {
+    margin-bottom: 40px;
+  }
+
+  h2 {
+    margin-bottom: 20px;
+    color: #2F01B3;
+  }
+}

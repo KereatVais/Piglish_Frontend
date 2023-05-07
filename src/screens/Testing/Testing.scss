@@ -1,0 +1,114 @@
+@import '../../variables';
+
+.container_bg_gray {
+  background-color: #F4F4F4;
+  width: 100%;
+  min-height: calc(100vh - $header-height - $header-padding * 2 - $footer-height - $footer-padding * 2);
+}
+
+.testing {
+  display: flex;
+  flex-direction: column;
+  width: $pc-width;
+  padding: $pc-padding 0;
+  margin: 0 auto;
+
+  h2 {
+    //margin-top: 60px;
+    margin-bottom: 40px;
+    color: #2F01B3;
+  }
+
+  .form {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+
+    &__subtitle {
+      //font-size: 24px;
+      //line-height: 28px;
+      font-weight: 400;
+      color: black;
+      margin: 0;
+    }
+
+    &__item {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+    }
+
+    input[type="radio"] {
+      appearance: none;
+      background-color: #fff;
+      margin: 0;
+      font: inherit;
+      color: currentColor;
+      width: 16px;
+      height: 16px;
+      border: 1px solid rgba(0, 0, 0, 0.5);
+      border-radius: 100%;
+      display: grid;
+      place-content: center;
+    }
+
+    input[type="radio"]::before {
+      content: "";
+      width: 8px;
+      height: 8px;
+      border-radius: 100%;
+      transform: scale(0);
+      transition: 120ms transform ease-in-out;
+      box-shadow: inset 1em 1em var(--form-control-color);
+    }
+
+    input[type="radio"]:checked::before {
+      transform: scale(1);
+      background-color: #2F01B3;
+    }
+
+    &__hint {
+      margin-left: 30px;
+    }
+
+    &__hint {
+      color: rgba(0, 0, 0, 0.7);
+      font-size: 16px;
+    }
+
+    label {
+      font-size: 18px;
+    }
+
+    &__block {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    &__answers {
+      display: flex;
+      gap: 50px;
+    }
+
+    &__answers_section_test {
+      flex-direction: column;
+      gap: 10px;
+      justify-content: left;
+    }
+  }
+
+  button {
+    background: linear-gradient(266.61deg, #A520D4 11.54%, #7A0FC9 101.13%);
+    margin-top: 40px;
+    color: white;
+    width: 210px;
+    padding: 12px 0;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 28px;
+    font-family: 'Sofia Sans', sans-serif;
+    border: none;
+    cursor: pointer;
+  }
+}
